@@ -12,6 +12,7 @@ def setup():
     b=0
     global x
     x=height/2
+    
 def draw():
     background(0)
     global lista
@@ -23,7 +24,7 @@ def draw():
     global b
     global x
     b+=2
-    stroke(255,0,0,80)  
+    #stroke(255,0,0,80) # to jest zbędne powtórzenie 
     stroke(*kolory["baba"])
     rect(i, x, 100, height/2)
     if i==0 and x==height/2:
@@ -54,3 +55,6 @@ def draw():
     
     if mousePressed:
         exit()
+        
+# spróbuj nazywać zmienne tym co one robią, o wiele lepiej się taki kod czyta
+# 2 pkt
