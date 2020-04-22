@@ -1,10 +1,8 @@
-import random
 add_library('pdf')
 
 def setup():
     global foto
-    global kot
-    size(400, 400) #1 ustawiamy wielkość okna
+    size(400, 400) # ustawiamy wielkość okna
     foto = loadImage("Gemba.jpg")
     beginRecord(PDF, "plik.pdf")
     
@@ -41,3 +39,7 @@ def draw():
 
 def mousePressed():
     exit()
+    
+# wybór między maską a wąsami powinien być możliwy w trakci działąnia programu, a więc poprzez jakieś UI wystawione do użytkownika.
+# zdjęcie dokumentowe ma swoje proporcje, któe zatraciłęś dostosowując do okna, które jest innych proporcji i twarz przez to wygląda nienaturalnie
+# obecna wersja 1,5pkt
