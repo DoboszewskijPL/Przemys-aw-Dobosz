@@ -18,7 +18,7 @@ def draw():
     else:
         fill(255,255,255,255)
         
-    text("P", 360, height/2)
+    text("P", width/2-40, height/2)
     
     
     if keyPressed:
@@ -44,5 +44,9 @@ def draw():
     s.vertex(width/2-40, height/2+60)
     s.vertex(width/2-10, height/2+40)
     s.vertex(width/2+100, height/2+90)
-    s.endShape(CLOSE) # kończymy definiować kształt i zapisujemy go pod zmienną 's'; opcja Close zamknie kształt, można też go skończyć rysować zostawiając otwartym - nie podając nic w nawiasie
+    s.endShape(CLOSE) # liczyłam na coś bardziej ozdobnego niż moje bazgroły ;)
     shape(s, 15, 0)
+    
+# nieźle, ale jest pewien mankament: zaznaczenie miało przekakiwać przy wybraniu strzałęk. U Ciebie same strzałki, gdy nic nie jest zaznaczone również podświetlają litery.
+# zrealizowanie tego kryterium wymaga przebudowy logiki, więc wedle uznania, czy masz czas i chęci
+# stan obecny: 1,75p
