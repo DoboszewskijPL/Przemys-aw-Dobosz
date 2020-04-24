@@ -3,7 +3,7 @@ add_library('pdf')
 
 def setup():
     global foto
-    size(600, 600)
+    size(600, 600) # to nie są poporcje zdjęcia, zostaje nam kawałek niepotrzebnego tła, miało ybć wczytanie dowolnego zdjęcia dokumentowego, gdy wczytam większe - obecnie mi utnie
     foto = loadImage("Gemba.jpg")
     
     fill(200,255,200)
@@ -12,11 +12,11 @@ def setup():
 def draw():
     global foto
     image(foto, 0,0, 400, 514)
-    if (key == CODED):
-        if (keyCode == 37):
-            clear()
-            beginRecord(PDF, "plik.pdf")
-            image(foto, 0,0, 400, 514)
+    if (key == CODED): # nie ma potrzeby powtarzać tego samego warunku, we wszystkim co jest pod nim wytabowane on obowiązuje
+        clear() # zamiast pisać dwa razy lepiej było wynieść warunek wyżej
+        beginRecord(PDF, "plik.pdf")
+        image(foto, 0,0, 400, 514)
+        if (keyCode == 37): # przydałąby się niedrukowalna na pdf'ie informacja dla użytkownika programu (który nie będzie widział kodu), jak to działa
             maska = createShape()
             maska.beginShape()
             maska.fill(215,0,0)
@@ -30,12 +30,7 @@ def draw():
             maska.endShape(CLOSE)
             shape(maska, 0,60)
             endRecord()
-            
-    if (key == CODED):
         if (keyCode == 39):
-            clear()
-            beginRecord(PDF, "plik.pdf")
-            image(foto, 0,0, 400, 514)
             wasy = createShape()
             wasy.beginShape()
             wasy.fill(0,0,0)
@@ -48,3 +43,6 @@ def draw():
 
 def mousePressed():
     exit()
+    
+# uwagi nie są obowiązujące, ale możesz poćwiczyć poświęcając im nieco uwagi
+# obecna wersja 1,75 (brakujące 0,25 byłoby za uporanie się z kwestią wczytywania uniwersalnie i w odpowiedniej proporcji)
