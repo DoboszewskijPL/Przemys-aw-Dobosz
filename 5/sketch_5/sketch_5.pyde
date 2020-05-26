@@ -20,21 +20,24 @@ class Pizza():
         
 def setup():
     size(400, 400)
-    global placek
-    global placuszek
+    global placki
     placek = Pizza(width/2-80, height/2, 100)
     placuszek= Pizza(width/2+100, height/2, 100)
+    placki = (placek, placuszek) # warto agregować w kolekcję, gdy jest więcej obiektów
+
     
 def mouseClicked():
-    placek.zmien_rodzaj()
-    placuszek.zmien_rodzaj()
+    for placek in placki:
+        placek.zmien_rodzaj()
 def mouseWheel(event):
-    placek.polacz(15)
-    placuszek.polacz(-15)
-    print(placek.laczenie)
-    print(placuszek.laczenie)
+    placki[0].polacz(15)
+    placki[1].polacz(-15)
+    for placek in placki:
+        print(placek.laczenie)
     
 def draw():
     background(120)
-    placek.rysuj()
-    placuszek.rysuj()
+    for placek in placki:
+        placek.rysuj()
+        
+# 1,75p; metody są  kalką działania moich, można było wynyśleć inne działanie
