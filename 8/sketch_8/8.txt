@@ -1,0 +1,12 @@
+Bankomat:
+	Wlacz_Bankomat = pokazuje liczbę dostępnych pieniędzy i możliwe opcje
+	zabierzPieniadze:
+		wyplac = jeśli liczba dostępnych pieniędzy jest większa lub równa wpisanej kwocie, wyświetla komunikat o udanej wypłacie, a pieniądze zostaną doliczone do kieszeni. W innym przypadku, żądanie zostanie odrzucone.
+	wplacKase:
+		wpłac = wpłaca do bankomatu podaną liczbę pieniędzy, o ile nie jest ona wyższa niż stan posiadania - wtedy wywala błąd.
+
+Klient:
+	stanPosiadania - pokazuje dostępne pieniądze klienta i umożliwia dysponowanie nimi.
+		wplata = przenosi pieniądze klienta do bankomatu, o ile nie chce wpłacić ich więcej niż ma.
+		wypłata = przenosi pieniądze z bankomatu do kieszeni klienta, o ile jest ich wystarczająco w bankomacie.
+	
