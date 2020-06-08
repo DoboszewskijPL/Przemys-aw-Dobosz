@@ -36,3 +36,5 @@ def setup():
     malyWykresowyKwadrat.sketchWykresowy(700,600, 5)
     wielkiWykresowyKwadrat = WykresowyKwadrat(350)
     wielkiWykresowyKwadrat.sketchWykresowy(200, 200, 83)
+    
+#1,75pkt
