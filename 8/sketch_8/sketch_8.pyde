@@ -40,6 +40,7 @@ def setup():
     global library, Przemek
     books = ["Naocznosc", "Sens Sztuki", "Harry Potter", "Duma I Uprzedzenie"]
     library = Library(books) # bo biblioteka bez książek, to nie biblioteka
+    Madzia = Customer()
     Przemek = Customer()
     
 def draw():
