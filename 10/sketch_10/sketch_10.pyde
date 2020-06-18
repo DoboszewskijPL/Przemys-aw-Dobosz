@@ -69,7 +69,7 @@ class Test(unittest.TestCase):
         result = sorted(ksiazki)
         self.assertEqual(result, ["Dzungla", "Harry Potter", "Pinokio"])
         
-    def test_parzystosci(self):
+    def test_ilosci(self):
         ksiazki = ['Harry Potter', 'Ksiega Dzungli', 'Pinokio']
         result = len(ksiazki)
         self.assertNotEqual(result, 5)
