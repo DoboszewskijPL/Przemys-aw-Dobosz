@@ -1,0 +1,5 @@
+Studio grafiki:
+Klient: Wygląda dobrze, ale lepiej byłoby, gdyby postać w tle była wyraźniejsza, a kolory delikatniejsze. Można też lepiej zgrać tło.
+Grafik: Dobrze, w takim razie zwiększymy krycie do 76,5%, lekko zmniejszymy nasycenie barw  i dodamy gradient. To sprawi, że postać będzie wyraźniejsza, a kolory tła lepiej się ze sobą zgrają.
+Wzorzec: fasada
+Dlaczego: Klient w prosty sposób opisuje, co chce poprawić w grafice. Grafik, znając specjalistyczne pojęcia, jest właśnie fasadą, mogącą przerobić proste polecenia na specjalistyczny język.
