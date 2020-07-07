@@ -1,4 +1,4 @@
-import unittest
+import unittest # wystarczy jeden import
 
 class Library():
     availableBooks = list()
@@ -59,20 +59,25 @@ def mouseClicked(): # poklikajcie kilkakrotnie w przyciski: wypożyczneie dwa ra
             library.lendBook(Przemek.requestBook("Duma I Uprzedzenie")) # cała interakcja między biblioteką a klientem łączy się dopiero tutaj, obiekty są oddzielne i każdy ma swoją odpowiedzialność: biblioteka za przechowywane książki, klient za wypożyczoną i to tej odpowiedzialności dotyczą metody, nie używają wzajemnie swoich pól, jest porządek
         if mouseY >40 and mouseY <60:
             library.addBook(Przemek.returnBook())
-            
-import unittest
 
 class Test(unittest.TestCase):
     
     def test_kolejnosci(self):
         ksiazki = ["Harry Potter", "Dzungla", "Pinokio"]
-        result = sorted(ksiazki)
+        result = sorted(ksiazki) # ten test sprawdza wbudowaną metodę sortującą, a powinien klasy i metody znajdujące się w kodzie
         self.assertEqual(result, ["Dzungla", "Harry Potter", "Pinokio"])
         
     def test_ilosci(self):
         ksiazki = ['Harry Potter', 'Ksiega Dzungli', 'Pinokio']
-        result = len(ksiazki)
+        result = len(ksiazki) # ponownie, sprawdza metodę wbudowaną len
         self.assertNotEqual(result, 5)
+        
+    def test_przykladny_wypozyczenia_z_biblioteki(self):
+        lib = Library(["Harry Potter", "Dzungla", "Pinokio"])
+        lib.lendBook("Harry Potter")
+        self.assertEqual(lib.availableBooks, ["Dzungla", "Pinokio"])
 
 if __name__ == '__main__':
     unittest.main()
+    
+#1,5pkt
